@@ -3,6 +3,9 @@
 '''
 Created on 20 May 2016
 
+This is a simple program helping to find the prime numbers below a threshold.
+Some basic Functions/Control Statements for Python are also tested here.
+
 @author: alexchi
 '''
 
