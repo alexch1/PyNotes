@@ -22,22 +22,22 @@ def getthreshold():
     else:
         length = int(input('\nSet the length of your threshold number:\n'))
         from random import randint
-        # uniform gives you a floating-point value
         number = randint(10 **(length-1), 10 ** length)
         print "\nThe threshold value is randomly set to be:", number
     return number
  
+
 def print_prime_numbers(threshold):
     import math
     for num in range(1,threshold+1):
         flag = True
-        
         for divnum in range(1,int(math.sqrt(num))+1):
             if (num % divnum == 0) and (divnum != num) and (divnum != 1):
                 flag = False
                 break
-        if flag == True:
+        if flag:
             print num
+
 
 print "\nThis is a program helping you to find the prime numbers below a certain threshold."
 threshold = getthreshold()
