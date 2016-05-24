@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*- 
-
+ 
 def get_threshold():
-# get the length from input and generate an int random value with the specific legth.
-
+# get the length and generate an random integer with the specific legth.
+ 
     choice = int(input('\nChoose the type (1 or 2):\n1. set a specific threshold number\n2. Randomly generated a threshold\n'))
     if choice == 1:
         number = int(input('\nPlease input your threshold number:\n'))        
@@ -13,7 +13,7 @@ def get_threshold():
         print ("\nThe threshold value is randomly set to be:", number)
     return number
  
-
+ 
 def print_prime_numbers(threshold):
     import math
     for num in range(1,threshold+1):
@@ -24,7 +24,7 @@ def print_prime_numbers(threshold):
                 break
         if flag:
             print (num)
-
+ 
 def main():
     print("""
     -------------------------------------------------------
@@ -38,11 +38,10 @@ def main():
     """)
     # print ("\u03C0\n")
     threshold = get_threshold()
-    print ("\nThe prime numbers below the threshold", threshold, "are shown below:")
+    print ("\nPrime numbers below ", threshold, "are shown below:")
     print_prime_numbers(threshold)
     print ("\n")
-
+ 
 # if and only if you run the code from this file.
 if __name__ == '__main__':
     main()
- 
