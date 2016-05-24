@@ -1,20 +1,7 @@
 # -*- coding:utf-8 -*- 
 
-'''
-Created on 20 May 2016
-
-This is a simple program helping to find the prime numbers below a threshold.
-Some basic Functions/Control Statements for Python are also tested here.
-
-@author: alexchi
-'''
-
- 
-def getthreshold():
-    '''
-    get the length from input and generate an int random value with the specific legth.
-
-    '''
+def get_threshold():
+# get the length from input and generate an int random value with the specific legth.
 
     choice = int(input('\nChoose the type (1 or 2):\n1. set a specific threshold number\n2. Randomly generated a threshold\n'))
     if choice == 1:
@@ -23,7 +10,7 @@ def getthreshold():
         length = int(input('\nSet the length of your threshold number:\n'))
         from random import randint
         number = randint(10 **(length-1), 10 ** length)
-        print "\nThe threshold value is randomly set to be:", number
+        print ("\nThe threshold value is randomly set to be:", number)
     return number
  
 
@@ -36,11 +23,25 @@ def print_prime_numbers(threshold):
                 flag = False
                 break
         if flag:
-            print num
+            print (num)
 
+def main():
+    print("""
+    -------------------------------------------------------
+    | This is a simple program helping to find the prime  |
+    | numbers below a threshold. Some basic Functions/    |
+    | Control Statements for Python are also tested here. |
+    |                                                     |
+    |@author: alexchi                                     |
+    |Created on 20 May 2016                               |
+    -------------------------------------------------------
+    """)
+    # print ("\u03C0\n")
+    threshold = get_threshold()
+    print ("\nThe prime numbers below the threshold", threshold, "are shown below:")
+    print_prime_numbers(threshold)
+    print ("\n")
 
-print "\nThis is a program helping you to find the prime numbers below a certain threshold."
-threshold = getthreshold()
-print "\nThe prime numbers below the threshold", threshold, "are shown below:"
-print_prime_numbers(threshold)
-print "\n"
+# if and only if you run the code from this file.
+if __name__ == '__main__':
+    main()
