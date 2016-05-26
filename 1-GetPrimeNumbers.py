@@ -17,7 +17,7 @@ def print_prime_numbers(threshold):
     for num in range(2,threshold+1):
         flag = True
         for divnum in range(1,int(math.sqrt(num))+1):
-            if (not num % divnum) and (divnum - num) and (divnum - 1):
+            if (not(num % divnum)) and (divnum - num) and (divnum - 1):
                 flag = False
                 break
         if flag:
