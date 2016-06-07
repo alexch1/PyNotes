@@ -102,9 +102,13 @@ def some(f, s): return any(map(f, s))
 some(lambda x: x in 'aeiou', 'frog')   # True
 some(lambda x: x in 'aeiou', 'fly')    # False
 
-######## Q?
-for i in (lambda x:x**i for i in range(3)):
-    print (i(4)) 
+######## 缩写及等价形式
+for i in (lambda x: x**i for i in range(5)):
+    print (i(3)) 
+for formula in (lambda x: x**i for i in [0,1,2,3,4]):
+    print(formula(x=3))
 # >>> 1 
-# >>> 14
-# >>> 16
+# >>> 3
+# >>> 9
+# >>> 27
+# >>> 81
